@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	var attempt, usernGuessNumber, secretNumber int
+	attempt = 4
+	secretNumber = rand.Intn(50)
+	for i := 0; i < attempt; i++ {
+		fmt.Println("Entert any number from 0 to 50 ,you have", attempt-i, " chances left")
+		fmt.Scanln(&usernGuessNumber)
+		if usernGuessNumber == secretNumber {
+			fmt.Println("Congrats,U Win the game")
+			break
+		} else {
+			fmt.Println("Sorry , try again in next chance")
+		}
+	}
+
+}
